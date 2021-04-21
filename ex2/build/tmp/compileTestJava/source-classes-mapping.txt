@@ -1,0 +1,4 @@
+org/zerock/ex2/Ex2ApplicationTests.java
+ org.zerock.ex2.Ex2ApplicationTests
+org/zerock/ex2/repository/MemoRepositoryTest.java
+ org.zerock.ex2.repository.MemoRepositoryTest
