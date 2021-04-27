@@ -1,5 +1,7 @@
 package org.zerock.guestbook.service;
 
+import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.types.dsl.BooleanExpression;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -11,8 +13,10 @@ import org.zerock.guestbook.dto.GuestbookDto;
 import org.zerock.guestbook.dto.PageRequestDto;
 import org.zerock.guestbook.dto.PageResultDto;
 import org.zerock.guestbook.entity.Guestbook;
+import org.zerock.guestbook.entity.QGuestbook;
 import org.zerock.guestbook.repository.GuestbookRepository;
 
+import java.util.Optional;
 import java.util.function.Function;
 
 @Service
@@ -35,14 +39,81 @@ public class GuestbookServiceImpl implements GuestbookService {
 
         return entity.getGno();
     }
+
+    @Override
+    public GuestbookDto read(Long gno) {
+        Optional<Guestbook> result = repository.findById(gno);
+
+        return result.isPresent() ? entityToDto(result.get()) : null;
+    }
+
+    @Override
+    public void remove(Long gno) {
+        repository.deleteById(gno);
+    }
+
+    @Override
+    public void modify(GuestbookDto dto) {
+        //업데이트 하는 항목은 제목, 내용
+        Optional<Guestbook> result = repository.findById(dto.getGno());
+
+        if(result.isPresent()){
+
+            Guestbook entity = result.get();
+
+            entity.changeTitle(dto.getTitle());
+            entity.changeContent(dto.getContent());
+
+            repository.save(entity);
+        }
+    }
+
     @Override
     public PageResultDto<GuestbookDto, Guestbook> getList(PageRequestDto requestDto){
         Pageable pageable = requestDto.getPageable(Sort.by("gno").descending());
 
-        Page<Guestbook> result = repository.findAll(pageable);
+        BooleanBuilder booleanBuilder = getSearch(requestDto);
+
+        Page<Guestbook> result = repository.findAll(booleanBuilder, pageable);  //Querydsl 사용
 
         Function<Guestbook, GuestbookDto> fn = (entity -> entityToDto(entity));
 
         return new PageResultDto<>(result, fn);
     }
+
+    private BooleanBuilder getSearch(PageRequestDto requestDto) {   //Querydsl 처리
+        String type = requestDto.getType();
+
+        BooleanBuilder booleanBuilder = new BooleanBuilder();
+        QGuestbook qGuestbook = QGuestbook.guestbook;
+
+        String keyword = requestDto.getKeyword();
+
+        BooleanExpression expression = qGuestbook.gno.gt(0L);   //gno > 0
+
+        booleanBuilder.and(expression);
+
+        if (type == null || type.trim().length() == 0) {
+            return booleanBuilder;
+        }
+
+        //검색 조건 작성
+        BooleanBuilder conditionBuilder = new BooleanBuilder();
+
+        if(type.contains("t")){
+            conditionBuilder.or(qGuestbook.title.contains(keyword));
+        }
+        if (type.contains("c")) {
+            conditionBuilder.or(qGuestbook.content.contains(keyword));
+        }
+        if (type.contains("w")) {
+            conditionBuilder.or(qGuestbook.writer.contains(keyword));
+        }
+
+        booleanBuilder.and(conditionBuilder);
+
+        return booleanBuilder;
+
+    }
+
 }
