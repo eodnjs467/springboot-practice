@@ -20,7 +20,7 @@ public class Board extends BaseEntity {
 
     private String content;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Member writer;      // 연관관계 설정
 
 }

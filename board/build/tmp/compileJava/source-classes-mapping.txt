@@ -13,3 +13,21 @@ org/zerock/board/BoardApplication.java
 org/zerock/board/entity/Reply.java
  org.zerock.board.entity.Reply
  org.zerock.board.entity.Reply$ReplyBuilder
+org/zerock/board/repository/MemberRepository.java
+ org.zerock.board.repository.MemberRepository
+org/zerock/board/repository/ReplyRepository.java
+ org.zerock.board.repository.ReplyRepository
+org/zerock/board/repository/BoardRepository.java
+ org.zerock.board.repository.BoardRepository
+org/zerock/board/dto/BoardDto.java
+ org.zerock.board.dto.BoardDto
+ org.zerock.board.dto.BoardDto$BoardDtoBuilder
+org/zerock/board/dto/PageResultDto.java
+ org.zerock.board.dto.PageResultDto
+org/zerock/board/service/BoardServiceImpl.java
+ org.zerock.board.service.BoardServiceImpl
+org/zerock/board/service/BoardService.java
+ org.zerock.board.service.BoardService
+org/zerock/board/dto/PageRequestDto.java
+ org.zerock.board.dto.PageRequestDto
+ org.zerock.board.dto.PageRequestDto$PageRequestDtoBuilder

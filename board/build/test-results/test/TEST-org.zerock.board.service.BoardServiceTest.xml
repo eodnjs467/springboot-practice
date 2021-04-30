@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.zerock.board.service.BoardServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-30T05:25:30" hostname="jeondaewon-ui-MacBookAir.local" time="0.292">
+  <properties/>
+  <testcase name="testList()" classname="org.zerock.board.service.BoardServiceTest" time="0.292"/>
+  <system-out><![CDATA[14:25:23.651 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:25:23.661 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:25:23.709 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.zerock.board.service.BoardServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:25:23.750 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.zerock.board.service.BoardServiceTest], using SpringBootContextLoader
+14:25:23.761 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.board.service.BoardServiceTest]: class path resource [org/zerock/board/service/BoardServiceTest-context.xml] does not exist
+14:25:23.761 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.board.service.BoardServiceTest]: class path resource [org/zerock/board/service/BoardServiceTestContext.groovy] does not exist
+14:25:23.762 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.zerock.board.service.BoardServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:25:23.762 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.zerock.board.service.BoardServiceTest]: BoardServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:25:23.839 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.zerock.board.service.BoardServiceTest]
+14:25:23.923 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/daewon/IdeaProjects/board/build/classes/java/main/org/zerock/board/BoardApplication.class]
+14:25:23.925 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.zerock.board.BoardApplication for test class org.zerock.board.service.BoardServiceTest
+14:25:24.024 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.zerock.board.service.BoardServiceTest]: using defaults.
+14:25:24.025 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:25:24.079 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1395be05, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@707d9b71, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@851a7c5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ed1828d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@400a6ec4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5c30d3a7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@595a286b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2bed1c27, org.springframework.test.context.event.EventPublishingTestExecutionListener@38823bd0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62756a8c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6a641fd9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@29ab2a96, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5ec8c8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4936f345, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@366a76d]
+14:25:24.089 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@71ce0fef testClass = BoardServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1747ba67 testClass = BoardServiceTest, locations = '{}', classes = '{class org.zerock.board.BoardApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3e370207, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7c7225b6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@8e0c471, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@59940080, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7f5b5011, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3462f77d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+14:25:24.154 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-04-30 14:25:24.589  INFO 1631 --- [    Test worker] o.zerock.board.service.BoardServiceTest  : Starting BoardServiceTest using Java 11.0.10 on jeondaewon-ui-MacBookAir.local with PID 1631 (started by daewon in /Users/daewon/IdeaProjects/board)
+2021-04-30 14:25:24.592  INFO 1631 --- [    Test worker] o.zerock.board.service.BoardServiceTest  : No active profile set, falling back to default profiles: default
+2021-04-30 14:25:25.660  INFO 1631 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-30 14:25:25.744  INFO 1631 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+2021-04-30 14:25:26.878  INFO 1631 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-30 14:25:26.927  INFO 1631 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-30 14:25:27.067  INFO 1631 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-30 14:25:27.171  INFO 1631 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-30 14:25:27.630  INFO 1631 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-30 14:25:27.657  INFO 1631 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-30 14:25:28.729  INFO 1631 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-30 14:25:28.740  INFO 1631 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30 14:25:29.719  WARN 1631 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30 14:25:30.106  INFO 1631 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 14:25:30.838  INFO 1631 --- [    Test worker] o.zerock.board.service.BoardServiceTest  : Started BoardServiceTest in 6.675 seconds (JVM running for 8.436)
+2021-04-30 14:25:31.007  INFO 1631 --- [    Test worker] o.zerock.board.service.BoardServiceImpl  : PageRequestDto(page=1, size=10, type=null, keyword=null)
+Hibernate: 
+    select
+        board0_.bno as col_0_0_,
+        member1_.email as col_1_0_,
+        count(reply2_.rno) as col_2_0_,
+        board0_.bno as bno1_0_0_,
+        member1_.email as email1_1_1_,
+        board0_.moddate as moddate2_0_0_,
+        board0_.regdate as regdate3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.title as title5_0_0_,
+        board0_.writer_email as writer_e6_0_0_,
+        member1_.moddate as moddate2_1_1_,
+        member1_.regdate as regdate3_1_1_,
+        member1_.name as name4_1_1_,
+        member1_.password as password5_1_1_ 
+    from
+        board board0_ 
+    left outer join
+        member member1_ 
+            on board0_.writer_email=member1_.email 
+    left outer join
+        reply reply2_ 
+            on (
+                reply2_.board_bno=board0_.bno
+            ) 
+    group by
+        board0_.bno 
+    order by
+        board0_.bno desc limit ?
+Hibernate: 
+    select
+        count(board0_.bno) as col_0_0_ 
+    from
+        board board0_
+BoardDto(bno=107, title=Test., content=Test..., writerEmail=user55@aa.com, writerName=USER55, regDate=2021-04-30T12:35:40.563630, modDate=2021-04-30T12:35:40.563630, replyCount=0)
+BoardDto(bno=106, title=Test., content=Test..., writerEmail=user55@aa.com, writerName=USER55, regDate=2021-04-30T12:34:05.078878, modDate=2021-04-30T12:34:05.078878, replyCount=0)
+BoardDto(bno=100, title=Title..100, content=Content...100, writerEmail=user100@aa.com, writerName=USER100, regDate=2021-04-29T10:24:21.047622, modDate=2021-04-29T10:24:21.047622, replyCount=2)
+BoardDto(bno=99, title=Title..99, content=Content...99, writerEmail=user99@aa.com, writerName=USER99, regDate=2021-04-29T10:24:21.038711, modDate=2021-04-29T10:24:21.038711, replyCount=4)
+BoardDto(bno=98, title=Title..98, content=Content...98, writerEmail=user98@aa.com, writerName=USER98, regDate=2021-04-29T10:24:21.031628, modDate=2021-04-29T10:24:21.031628, replyCount=2)
+BoardDto(bno=97, title=Title..97, content=Content...97, writerEmail=user97@aa.com, writerName=USER97, regDate=2021-04-29T10:24:21.024237, modDate=2021-04-29T10:24:21.024237, replyCount=5)
+BoardDto(bno=96, title=Title..96, content=Content...96, writerEmail=user96@aa.com, writerName=USER96, regDate=2021-04-29T10:24:21.018219, modDate=2021-04-29T10:24:21.018219, replyCount=1)
+BoardDto(bno=95, title=Title..95, content=Content...95, writerEmail=user95@aa.com, writerName=USER95, regDate=2021-04-29T10:24:21.010041, modDate=2021-04-29T10:24:21.010041, replyCount=2)
+BoardDto(bno=94, title=Title..94, content=Content...94, writerEmail=user94@aa.com, writerName=USER94, regDate=2021-04-29T10:24:21.004971, modDate=2021-04-29T10:24:21.004971, replyCount=8)
+BoardDto(bno=93, title=Title..93, content=Content...93, writerEmail=user93@aa.com, writerName=USER93, regDate=2021-04-29T10:24:20.994175, modDate=2021-04-29T10:24:20.994175, replyCount=3)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
