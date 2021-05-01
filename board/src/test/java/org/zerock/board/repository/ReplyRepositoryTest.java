@@ -10,8 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class ReplyRepositoryTest {
 
@@ -44,6 +42,13 @@ class ReplyRepositoryTest {
             System.out.println(Arrays.toString(arr));
         }
 
+    }
+
+    @Test
+    public void testListByBoard(){
+        List<Reply> replyList = replyRepository.getRepliesByBoardOrderByRno(Board.builder().bno(97L).build());
+
+        replyList.forEach(reply -> System.out.println(reply));
     }
 
 }

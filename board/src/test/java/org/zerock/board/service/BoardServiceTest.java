@@ -8,8 +8,6 @@ import org.zerock.board.dto.PageRequestDto;
 import org.zerock.board.dto.PageResultDto;
 import org.zerock.board.entity.Board;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class BoardServiceTest {
 
@@ -17,7 +15,7 @@ class BoardServiceTest {
     private BoardService boardService;
 
     @Test
-    public void testRegister(){
+    public void testRegister() {
 
         BoardDto dto = BoardDto.builder()
                 .title("Test.")
@@ -29,7 +27,7 @@ class BoardServiceTest {
     }
 
     @Test
-    public void testList(){
+    public void testList() {
         PageRequestDto pageRequestDto = new PageRequestDto();
 
         PageResultDto<BoardDto, Object[]> result = boardService.getList(pageRequestDto);
@@ -40,4 +38,29 @@ class BoardServiceTest {
         }
     }
 
+    @Test
+    public void testGet() {
+        Long bno = 100L;
+        BoardDto boardDto = boardService.get(bno);
+
+        System.out.println(boardDto);
+
+    }
+
+    @Test
+    public void testRemove() {
+        Long bno = 1L;
+        boardService.removeWithReplies(bno);
+    }
+
+    @Test
+    public void testModify(){
+        BoardDto boardDto = BoardDto.builder()
+                .bno(2L)
+                .title("제목 변경")
+                .content("내용 변경")
+                .build();
+
+        boardService.modify(boardDto);
+    }
 }

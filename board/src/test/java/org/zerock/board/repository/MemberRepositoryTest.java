@@ -7,8 +7,6 @@ import org.zerock.board.entity.Member;
 
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class MemberRepositoryTest {
 
