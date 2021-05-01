@@ -1,33 +1,56 @@
+org/zerock/board/repository/MemberRepository.java
+ org.zerock.board.repository.MemberRepository
+org/zerock/board/dto/PageResultDto.java
+ org.zerock.board.dto.PageResultDto
 org/zerock/board/ServletInitializer.java
  org.zerock.board.ServletInitializer
 org/zerock/board/entity/Board.java
  org.zerock.board.entity.Board
  org.zerock.board.entity.Board$BoardBuilder
-org/zerock/board/entity/BaseEntity.java
- org.zerock.board.entity.BaseEntity
 org/zerock/board/entity/Member.java
  org.zerock.board.entity.Member
  org.zerock.board.entity.Member$MemberBuilder
-org/zerock/board/BoardApplication.java
- org.zerock.board.BoardApplication
-org/zerock/board/entity/Reply.java
- org.zerock.board.entity.Reply
- org.zerock.board.entity.Reply$ReplyBuilder
-org/zerock/board/repository/MemberRepository.java
- org.zerock.board.repository.MemberRepository
-org/zerock/board/repository/ReplyRepository.java
- org.zerock.board.repository.ReplyRepository
-org/zerock/board/repository/BoardRepository.java
- org.zerock.board.repository.BoardRepository
+org/zerock/board/entity/QMember.java
+ org.zerock.board.entity.QMember
+org/zerock/board/controller/BoardController.java
+ org.zerock.board.controller.BoardController
+org/zerock/board/entity/BaseEntity.java
+ org.zerock.board.entity.BaseEntity
 org/zerock/board/dto/BoardDto.java
  org.zerock.board.dto.BoardDto
  org.zerock.board.dto.BoardDto$BoardDtoBuilder
-org/zerock/board/dto/PageResultDto.java
- org.zerock.board.dto.PageResultDto
-org/zerock/board/service/BoardServiceImpl.java
- org.zerock.board.service.BoardServiceImpl
+org/zerock/board/BoardApplication.java
+ org.zerock.board.BoardApplication
 org/zerock/board/service/BoardService.java
  org.zerock.board.service.BoardService
 org/zerock/board/dto/PageRequestDto.java
  org.zerock.board.dto.PageRequestDto
  org.zerock.board.dto.PageRequestDto$PageRequestDtoBuilder
+org/zerock/board/entity/QBoard.java
+ org.zerock.board.entity.QBoard
+org/zerock/board/entity/QBaseEntity.java
+ org.zerock.board.entity.QBaseEntity
+org/zerock/board/repository/search/SearchBoardRepositoryImpl.java
+ org.zerock.board.repository.search.SearchBoardRepositoryImpl
+org/zerock/board/repository/search/SearchBoardRepository.java
+ org.zerock.board.repository.search.SearchBoardRepository
+org/zerock/board/repository/BoardRepository.java
+ org.zerock.board.repository.BoardRepository
+org/zerock/board/entity/QReply.java
+ org.zerock.board.entity.QReply
+org/zerock/board/entity/Reply.java
+ org.zerock.board.entity.Reply
+ org.zerock.board.entity.Reply$ReplyBuilder
+org/zerock/board/service/BoardServiceImpl.java
+ org.zerock.board.service.BoardServiceImpl
+org/zerock/board/repository/ReplyRepository.java
+ org.zerock.board.repository.ReplyRepository
+org/zerock/board/service/ReplyServiceImpl.java
+ org.zerock.board.service.ReplyServiceImpl
+org/zerock/board/dto/ReplyDto.java
+ org.zerock.board.dto.ReplyDto
+ org.zerock.board.dto.ReplyDto$ReplyDtoBuilder
+org/zerock/board/service/ReplyService.java
+ org.zerock.board.service.ReplyService
+org/zerock/board/controller/ReplyController.java
+ org.zerock.board.controller.ReplyController
