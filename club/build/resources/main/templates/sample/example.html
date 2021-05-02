@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steem.js</title>
+</head>
+<body>
+
+<script>
+    const request = new XMLHttpRequest();
+    const url = "https://api.bithumb.com/public/ticker/BTC";
+    request.open("GET", url, false);
+    request.send();
+    var obj = JSON.parse(request.responseText);
+
+    console.log(obj); // 긁어온 내용 뿌리기
+    console.log(obj.data.opening_price); // 긁어온 내용중  opening_price 뿌리기
+</script>
+</body>
+</html>

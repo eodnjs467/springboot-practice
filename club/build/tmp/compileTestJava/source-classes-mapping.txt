@@ -1,0 +1,6 @@
+org/zerock/club/ClubApplicationTests.java
+ org.zerock.club.ClubApplicationTests
+org/zerock/club/security/PasswordTests.java
+ org.zerock.club.security.PasswordTests
+org/zerock/club/entity/ClubMemberTest.java
+ org.zerock.club.entity.ClubMemberTest

@@ -1,0 +1,2883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.zerock.club.entity.ClubMemberTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-02T04:33:09" hostname="jeondaewon-ui-MacBookAir.local" time="9.782">
+  <properties/>
+  <testcase name="insertDummies()" classname="org.zerock.club.entity.ClubMemberTest" time="9.782"/>
+  <system-out><![CDATA[13:33:02.416 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:33:02.427 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:33:02.473 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.zerock.club.entity.ClubMemberTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:33:02.484 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.zerock.club.entity.ClubMemberTest], using SpringBootContextLoader
+13:33:02.489 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.club.entity.ClubMemberTest]: class path resource [org/zerock/club/entity/ClubMemberTest-context.xml] does not exist
+13:33:02.490 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.club.entity.ClubMemberTest]: class path resource [org/zerock/club/entity/ClubMemberTestContext.groovy] does not exist
+13:33:02.490 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.zerock.club.entity.ClubMemberTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:33:02.491 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.zerock.club.entity.ClubMemberTest]: ClubMemberTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:33:02.557 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.zerock.club.entity.ClubMemberTest]
+13:33:02.634 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/daewon/IdeaProjects/club/build/classes/java/main/org/zerock/club/ClubApplication.class]
+13:33:02.639 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.zerock.club.ClubApplication for test class org.zerock.club.entity.ClubMemberTest
+13:33:02.728 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.zerock.club.entity.ClubMemberTest]: using defaults.
+13:33:02.728 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+13:33:02.745 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2db1cade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ab470de, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4ea6e886, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5235c351, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71f114f3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@380aa893, org.springframework.test.context.transaction.TransactionalTestExecutionListener@411185cc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3dc2e9f4, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@446d2433, org.springframework.test.context.event.EventPublishingTestExecutionListener@29ce521d, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@643c9d0d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4e1b5537, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@637abc7b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38ff44b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@38ab6254, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2c0d2a9b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1aa2c205]
+13:33:02.749 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@749e980f testClass = ClubMemberTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11d09ad2 testClass = ClubMemberTest, locations = '{}', classes = '{class org.zerock.club.ClubApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@51837e9a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@451cd797, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@76b3405e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4b5657b2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@88c98da, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a543795], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+13:33:02.866 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-05-02 13:33:03.337  INFO 1840 --- [    Test worker] org.zerock.club.entity.ClubMemberTest    : Starting ClubMemberTest using Java 11.0.10 on jeondaewon-ui-MacBookAir.local with PID 1840 (started by daewon in /Users/daewon/IdeaProjects/club)
+2021-05-02 13:33:03.342  INFO 1840 --- [    Test worker] org.zerock.club.entity.ClubMemberTest    : No active profile set, falling back to default profiles: default
+2021-05-02 13:33:04.506  INFO 1840 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-02 13:33:04.572  INFO 1840 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2021-05-02 13:33:05.676  INFO 1840 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-02 13:33:05.724  INFO 1840 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-02 13:33:05.856  INFO 1840 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-02 13:33:05.951  INFO 1840 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-02 13:33:06.401  INFO 1840 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-02 13:33:06.427  INFO 1840 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Hibernate: 
+    
+    create table club_member (
+       email varchar(255) not null,
+        moddate datetime(6),
+        regdate datetime(6),
+        from_social bit not null,
+        name varchar(255),
+        password varchar(255),
+        primary key (email)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table club_member_role_set (
+       club_member_email varchar(255) not null,
+        role_set integer
+    ) engine=InnoDB
+Hibernate: 
+    
+    alter table club_member_role_set 
+       add constraint FKbfljk8ybtolixxc88osbodrek 
+       foreign key (club_member_email) 
+       references club_member (email)
+2021-05-02 13:33:07.400  INFO 1840 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-02 13:33:07.413  INFO 1840 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 13:33:07.605  WARN 1840 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-02 13:33:08.361  INFO 1840 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-02 13:33:09.633 DEBUG 1840 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/sample/all']
+2021-05-02 13:33:09.635 DEBUG 1840 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/sample/member']
+2021-05-02 13:33:09.656  INFO 1840 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@328f7a61, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b88318b, org.springframework.security.web.header.HeaderWriterFilter@5885eac5, org.springframework.security.web.authentication.logout.LogoutFilter@5e283d98, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@589bfa7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@78c1d07a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@224dcf1b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b31f51c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c836287, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c52156, org.springframework.security.web.session.SessionManagementFilter@1c356ea5, org.springframework.security.web.access.ExceptionTranslationFilter@49607d5e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ab1f4a6]
+2021-05-02 13:33:09.763  INFO 1840 --- [    Test worker] org.zerock.club.entity.ClubMemberTest    : Started ClubMemberTest in 6.874 seconds (JVM running for 8.544)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        clubmember0_.email as email1_0_0_,
+        clubmember0_.moddate as moddate2_0_0_,
+        clubmember0_.regdate as regdate3_0_0_,
+        clubmember0_.from_social as from_soc4_0_0_,
+        clubmember0_.name as name5_0_0_,
+        clubmember0_.password as password6_0_0_ 
+    from
+        club_member clubmember0_ 
+    where
+        clubmember0_.email=?
+Hibernate: 
+    insert 
+    into
+        club_member
+        (moddate, regdate, from_social, name, password, email) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        club_member_role_set
+        (club_member_email, role_set) 
+    values
+        (?, ?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
