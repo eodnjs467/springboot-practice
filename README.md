@@ -10,3 +10,5 @@ ex3 -> Spring MVC, Thymeleaf, JPA, Layout, LocalDateTime
 guestbook -> Thymeleaf와 SpringData JPA를 Spring MVC와 함께 결합한 미니 프로젝트(Querydsl을 이용해 검색환경 구성)
 <br>
 board -> N:1(다대일 관계) 처리, @RestController와 JSON 처리
+<br>
+club -> Boot 와 Spring Security 연동, 소셜 로그인 처리
