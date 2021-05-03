@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.zerock.club.repository.ClubMemberRepository;
 
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,5 +41,14 @@ class ClubMemberTest {
         });
     }
 
+    @Test
+    public void testRead(){
+        Optional<ClubMember> result = repository.findByEmail("user95@zerock.org", false);
+
+        ClubMember clubMember = result.get();
+
+        System.out.println(clubMember);
+
+    }
 
 }

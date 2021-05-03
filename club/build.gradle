@@ -34,6 +34,7 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
     compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time'
     compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 }
 
 test {
