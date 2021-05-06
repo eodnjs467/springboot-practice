@@ -15,5 +15,5 @@ club -> Boot 와 Spring Security 연동, 소셜 로그인 처리
 <br>
 AcademyKorea -> 전국의 학원 정보를 얻을 수 있을 수 있음. 개강날짜와 개강과목을 확인 후 신청 가능
 <br>
-[20210505] -> UI설계, Spring Security 적용
+[20210505] -> UI설계, Spring Security 적용  <br>
 [20210506] -> UI구현(1) - index, event ,default_Page(header, nav, footer)
