@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+}
+html, body{
+    height: 100%;
+}
+
+header{
+    background-color: burlywood;
+    padding: 22px 0 22px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+body {
+    font-size: 12px;
+    line-height: 16px;
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+div {
+    display: block;
+}
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ol, ul{
+    list-style: none;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul{
+    margin: 0;
+    padding: 0;
+}
+
+/*              menu                    */
+#menu .menu_inner{
+    position: relative;
+    width: 1130px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+#menu .group_nav{
+    overflow: hidden;
+    position: relative;
+    padding: 11px 0 11px 0;
+    background-color: aqua;
+}
+
+#menu .navList{
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    letter-spacing: -.3px;
+}
+
+#menu .group_nav .nav_item+.nav_item{
+    /*margin-left: 15px;*/
+}
+
+#menu .group_nav .nav_item{
+    text-align: center;
+    float: left;
+    width: 20%;
+}
+
+/*              container               */
+#container{
+    position: relative;
+    width: 1130px;
+    height: 670px;
+    padding: 20px 0px;     /* 20, 0 줘도 됨 */
+    margin: 0 auto;
+    letter-spacing: -.2px;
+    text-align: center;
+    background-color: beige;
+}
+.top{
+    position: relative;
+    width: 1130px;
+    /*padding: 12px 15px 11px 15px;*/
+    height: 300px;
+}
+.column_left{
+    /*position: relative;*/
+    float: left;
+    width: 850px;
+    height:300px;
+}
+[name="slide"] {display: none;}
+.slide_box{
+    max-width: 850px;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
+.slide_box img{
+    max-width: 100%;
+    width: 850px;
+    height: 300px;
+}
+.slide_box .slide_list{
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+.slide_box .slide_item{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 300px;
+    transition: all .35s;       /* 이거 자동넘어가는거*/
+}
+.slide_box .slide_item label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+label.left{
+    left: 20px;
+    /*background-color: #5F5F5F;*/
+    background-image: url("../img/left-arrow.png");
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+label.right{
+    right: 20px;
+    /*background-color: red;*/
+    background-image: url("../img/right-arrow.png");
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+[id="slide01"]:checked ~ .slide_list .slide_item {transform: translateX(0); animation: slide01 20s infinite}
+[id="slide02"]:checked ~ .slide_list .slide_item {transform: translateX(-100%); animation: slide02 20s infinite}
+[id="slide03"]:checked ~ .slide_list .slide_item {transform: translateX(-200%); animation: slide03 20s infinite}
+[id="slide04"]:checked ~ .slide_list .slide_item {transform: translateX(-300%); animation: slide04 20s infinite}
+@keyframes slide01 {
+    0%{left: 0%;}
+    23%{left: 0%;}
+    25%{left: -100%;}
+    48%{left: -100%;}
+    50%{left: -200%;}
+    73%{left: -200%;}
+    75%{left: -300%;}
+    98%{left: -300%;}
+    100%{left: 0%;}
+}
+@keyframes slide02 {
+    0%{left: 0%;}
+    23%{left: 0%;}
+    25%{left: -100%;}
+    48%{left: -100%;}
+    50%{left: -200%;}
+    73%{left: -200%;}
+    75%{left: 100%;}
+    98%{left: 100%;}
+    100%{left: 0%;}
+}
+@keyframes slide03 {
+    0%{left: 0%;}
+    23%{left: 0%;}
+    25%{left: -100%;}
+    48%{left: -100%;}
+    50%{left: 200%;}
+    73%{left: 200%;}
+    75%{left: 100%;}
+    98%{left: 100%;}
+    100%{left: 0%;}
+}
+@keyframes slide04 {
+    0%{left: 0%;}
+    23%{left: 0%;}
+    25%{left: 300%;}
+    48%{left: 300%;}
+    50%{left: 200%;}
+    73%{left: 200%;}
+    75%{left: 100%;}
+    98%{left: 100%;}
+    100%{left: 0%;}
+}
+
+.column_right{
+    /*position: relative;*/
+    float: right;
+    width: 250px;
+    height: 300px;
+}
+
+
+/*                */
+#wrap {
+    overflow: hidden;
+    min-width: 1190px;
+    /*min-height: 100%;*/
+    /*margin: 0 auto -155px;*/
+}
+
+
+/*              bottom              */
+.bottom{
+    width: 1130px;
+    padding: 22px 0 16px;
+    /*height: 400px;*/
+
+}
+.bottom .group_main{
+    /*float: left;*/
+    /*padding: 22px 0 16px;*/
+    height: 350px;
+    background-color: yellow;
+    /*margin: 22px 0 10px;*/
+}
+
+#main_left{background-color: red}
+#main_right{background-color: greenyellow}
+
+/*              footer              */
+footer {
+    background-color: #ff25d8;
+    text-align: center;
+    padding: 0 30px 92px;
+    margin: 0 auto;
+}
+
+/*              event               */
+.event_item > img{
+    /*padding: 10px 0 10px 0;*/
+    margin: 10px 0 10px;
+    width: 1130px;
+    height: 150px;
+    border: 1px solid gray;
+}
