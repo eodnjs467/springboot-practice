@@ -1,0 +1,61 @@
+com/example/testdb/entity/QUserReply.java
+ com.example.testdb.entity.QUserReply
+com/example/testdb/service/UserReplyService.java
+ com.example.testdb.service.UserReplyService
+com/example/testdb/dto/PageRequestDto.java
+ com.example.testdb.dto.PageRequestDto
+ com.example.testdb.dto.PageRequestDto$PageRequestDtoBuilder
+com/example/testdb/dto/PageResultDto.java
+ com.example.testdb.dto.PageResultDto
+com/example/testdb/service/UserInfoService.java
+ com.example.testdb.service.UserInfoService
+com/example/testdb/dto/UserReplyDto.java
+ com.example.testdb.dto.UserReplyDto
+ com.example.testdb.dto.UserReplyDto$UserReplyDtoBuilder
+com/example/testdb/repository/UserInfoRepository.java
+ com.example.testdb.repository.UserInfoRepository
+com/example/testdb/entity/QUserInfo.java
+ com.example.testdb.entity.QUserInfo
+com/example/testdb/repository/UserReplyRepository.java
+ com.example.testdb.repository.UserReplyRepository
+com/example/testdb/TestdbApplication.java
+ com.example.testdb.TestdbApplication
+com/example/testdb/repository/UserBoardRepository.java
+ com.example.testdb.repository.UserBoardRepository
+com/example/testdb/dto/UserBoardDto.java
+ com.example.testdb.dto.UserBoardDto
+ com.example.testdb.dto.UserBoardDto$UserBoardDtoBuilder
+com/example/testdb/repository/search/SearchBoardRepositoryImpl.java
+ com.example.testdb.repository.search.SearchBoardRepositoryImpl
+com/example/testdb/service/UserReplyServiceImpl.java
+ com.example.testdb.service.UserReplyServiceImpl
+com/example/testdb/dto/UserInfoDto.java
+ com.example.testdb.dto.UserInfoDto
+ com.example.testdb.dto.UserInfoDto$UserInfoDtoBuilder
+com/example/testdb/entity/UserReply.java
+ com.example.testdb.entity.UserReply
+ com.example.testdb.entity.UserReply$UserReplyBuilder
+com/example/testdb/service/UserBoardServiceImpl.java
+ com.example.testdb.service.UserBoardServiceImpl
+com/example/testdb/service/UserBoardService.java
+ com.example.testdb.service.UserBoardService
+com/example/testdb/ServletInitializer.java
+ com.example.testdb.ServletInitializer
+com/example/testdb/repository/search/SearchBoardRepository.java
+ com.example.testdb.repository.search.SearchBoardRepository
+com/example/testdb/entity/BaseEntity.java
+ com.example.testdb.entity.BaseEntity
+com/example/testdb/entity/QUserBoard.java
+ com.example.testdb.entity.QUserBoard
+com/example/testdb/entity/QBaseEntity.java
+ com.example.testdb.entity.QBaseEntity
+com/example/testdb/entity/UserBoard.java
+ com.example.testdb.entity.UserBoard
+ com.example.testdb.entity.UserBoard$UserBoardBuilder
+com/example/testdb/service/UserInfoServiceImpl.java
+ com.example.testdb.service.UserInfoServiceImpl
+com/example/testdb/entity/UserInfo.java
+ com.example.testdb.entity.UserInfo
+ com.example.testdb.entity.UserInfo$UserInfoBuilder
+com/example/testdb/controller/IndexController.java
+ com.example.testdb.controller.IndexController
