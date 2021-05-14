@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="wrap">
+    <th:block layout:fragment="header" th:include="@{/fragments/header}"></th:block>
+    <th:block layout:fragment="nav" th:include="@{/fragments/nav}"></th:block>
+    <div id="container" role="main">
+        <ul class="event_list">
+            <li class="event_item">
+                <img src="/img/slide-image01.png">
+            </li>
+            <li class="event_item">
+                <img src="/img/slide-image02.png">
+            </li>
+            <li class="event_item">
+                <img src="/img/slide-image03.png">
+            </li>
+            <li class="event_item">
+                <img src="/img/slide-image04.png">
+            </li>
+            <li class="event_item">
+                <img src="/img/slide-image01.png">
+            </li>
+            <li class="event_item">
+                <img src="/img/slide-image02.png">
+            </li>
+        </ul>
+    </div>
+    <th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>
+</div>
+
+</body>
+</html>

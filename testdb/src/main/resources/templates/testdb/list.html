@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="wrap">
+    <th:block layout:fragment="header" th:include="@{/fragments/header}"></th:block>
+    <th:block layout:fragment="nav" th:include="@{/fragments/nav}"></th:block>
+    <div id="container" role="main">
+      <span>
+        <a th:href="@{/testdb/register}">
+          <button type="button" class="btn btn-outline-primary">등록</button>
+        </a>
+      </span>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Writer</th>
+                <th scope="col">Regdate</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--            <tr th:each="dto : ${result.dtoList}">-->
+<!--                <th scope="row">-->
+<!--                    <a th:href="@{/board/read(bno = ${dto.bno}, page = ${result.page}, type = ${pageRequestDto.type}, keyword = ${pageRequestDto.keyword})}">[[${dto.bno}]]</a>-->
+<!--                </th>-->
+<!--                <td>[[${dto.title}]] &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; [<b th:text="${dto.replyCount}"></b>]</td>-->
+<!--                <td>[[${dto.writerName}]] <small> [[${dto.writerEmail}]]</small></td>-->
+<!--                <td>[[${#temporals.format(dto.regDate, 'yyyy/MM/dd')}]]</td>-->
+<!--            </tr>-->
+            </tbody>
+        </table>
+
+    </div>
+    <th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>
+</div>
+
+</body>
+</html>

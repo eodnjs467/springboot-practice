@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="wrap">
+<th:block layout:fragment="header" th:include="@{/fragments/header}"></th:block>
+<th:block layout:fragment="nav" th:include="@{/fragments/nav}"></th:block>
+<div id="container" role="main">
+    <div id="top" class="top">
+        <div id="main_left" class="column_left">
+            <div class="slide_box">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <input type="radio" name="slide" id="slide04">
+                <ul class="slide_list">
+                    <li class="slide_item">
+                        <div>
+                            <label for="slide04" class="left"></label>
+                            <label for="slide02" class="right"></label>
+                            <a><img src="/img/slide-image01.png"></a>
+                        </div>
+                    </li>
+                    <li class="slide_item">
+                        <div>
+                            <label for="slide01" class="left"></label>
+                            <label for="slide03" class="right"></label>
+                            <a><img src="/img/slide-image02.png"></a>
+                        </div>
+                    </li>
+                    <li class="slide_item">
+                        <div>
+                            <label for="slide02" class="left"></label>
+                            <label for="slide04" class="right"></label>
+                            <a><img src="/img/slide-image03.png"></a>
+                        </div>
+                    </li>
+                    <li class="slide_item">
+                        <div>
+                            <label for="slide03" class="left"></label>
+                            <label for="slide01" class="right"></label>
+                            <a><img src="/img/slide-image04.png"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main_right" class="column_right">
+            right
+        </div>
+    </div>
+    <div id="bottom" class="bottom">
+        <div id="bottom_main" class="group_main" data-clk-prefix="ncy"><h1>게시판</h1></div>
+<!--        <img src="../../static/img/left-arrow.png">-->
+    </div>
+</div>
+<th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>
+</div>
+<!--<header>header</header>-->
+<!--<nav>nav</nav>-->
+<!--<footer>footer</footer>-->
+
+</body>
+</html>

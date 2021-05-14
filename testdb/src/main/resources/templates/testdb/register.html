@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+  <title>Title</title>
+</head>
+
+<body>
+<div id="wrap">
+  <th:block layout:fragment="header" th:include="@{/fragments/header}"></th:block>
+  <th:block layout:fragment="nav" th:include="@{/fragments/nav}"></th:block>
+  <div id="container" role="main">
+    <form th:action="@{/testdb/register}" th:method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Enter Title">
+      </div>
+
+      <div class="form-group">
+        <label>Content</label>
+        <textarea class="form-control" rows="5" name="content"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Writer Email</label>
+        <input type="text" class="form-control" name="writerEmail" placeholder="Writer Eamil">
+      </div>
+
+      <button type="submit" class="btn btn-primary">등록</button>
+
+    </form>
+  </div>
+  <th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>
+</div>
+
+</body>
+</html>
