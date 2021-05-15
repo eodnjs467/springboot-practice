@@ -17,27 +17,22 @@
           <button type="button" class="btn btn-outline-primary">등록</button>
         </a>
       </span>
+        <table border="1px solid gray">
 
-        <table class="table table-striped">
-            <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Writer</th>
-                <th scope="col">Regdate</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
             </tr>
-            </thead>
-            <tbody>
-<!--            <tr th:each="dto : ${result.dtoList}">-->
-<!--                <th scope="row">-->
-<!--                    <a th:href="@{/board/read(bno = ${dto.bno}, page = ${result.page}, type = ${pageRequestDto.type}, keyword = ${pageRequestDto.keyword})}">[[${dto.bno}]]</a>-->
-<!--                </th>-->
-<!--                <td>[[${dto.title}]] &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; [<b th:text="${dto.replyCount}"></b>]</td>-->
-<!--                <td>[[${dto.writerName}]] <small> [[${dto.writerEmail}]]</small></td>-->
-<!--                <td>[[${#temporals.format(dto.regDate, 'yyyy/MM/dd')}]]</td>-->
-<!--            </tr>-->
-            </tbody>
+            <tr>
+                <td>#</td>
+                <td>#</td>
+                <td>#</td>
+                <td>#</td>
+            </tr>
         </table>
+
 
     </div>
     <th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>

@@ -35,8 +35,7 @@ public class IndexController {
     }
 
     @GetMapping("/list")
-    public void list(PageRequestDto pageRequestDto, Model model) {
-        model.addAttribute("result", userBoardService.getList(pageRequestDto));
+    public void list(PageRequestDto pageRequestDto) {
         log.info("List Page");
     }
 
