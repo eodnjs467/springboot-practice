@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain.item;
 
+import jpabook.jpashop.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +19,6 @@ public abstract class Item {
     private Long id;
 
     private String name;
-
     private int price;
     private int stockQuantity;
 
