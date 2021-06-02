@@ -4,10 +4,13 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 @Getter @Setter
 public class MemberForm {
 
-    @NonNull
+    @NotEmpty(message = "회원 이름은 필수 입니다.")
     private String name;
 
     private String city;
